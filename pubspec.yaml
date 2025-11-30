@@ -20,6 +20,8 @@ dependencies:
   get_storage:
   flutter_native_splash:
   device_preview:
+  smooth_page_indicator:
+  google_fonts:
 
 dev_dependencies:
   flutter_test:
@@ -37,6 +39,7 @@ flutter:
     - assets/icons/
     - assets/logos/
     - assets/videos/
+    - assets/images/on_boarding_images/
 
   fonts:
     - family: poppings

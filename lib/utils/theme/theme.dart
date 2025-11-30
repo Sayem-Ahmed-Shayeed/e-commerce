@@ -1,23 +1,32 @@
-import 'package:ecommerce/utils/theme/text_theme/dark_text_theme.dart';
-import 'package:ecommerce/utils/theme/text_theme/light_text_theme.dart';
 import 'package:flutter/material.dart';
 
-class MyTheme {
-  MyTheme._();
+import 'text_theme/text_theme.dart';
+import 'widget_themes/appbar_theme.dart';
+import 'widget_themes/elevated_button_theme.dart';
+import 'widget_themes/outlined_button_theme.dart';
+import 'widget_themes/text_field_theme.dart';
+
+class MyAppTheme {
+  MyAppTheme._();
 
   static ThemeData lightTheme = ThemeData(
+    fontFamily: 'poppings',
+    scaffoldBackgroundColor: Colors.white,
     brightness: Brightness.light,
-    useMaterial3: true,
-    fontFamily: 'poppings',
-    primaryColor: Colors.blue,
-    textTheme: lightTextTheme,
+    textTheme: MyTextTheme.lightTextTheme,
+    appBarTheme: MyAppBarTheme.lightAppBarTheme,
+    elevatedButtonTheme: MyElevatedButtonTheme.lightElevatedButtonTheme,
+    outlinedButtonTheme: MyOutlinedButtonTheme.lightOutlinedButtonTheme,
+    inputDecorationTheme: MyTextFormFieldTheme.lightInputDecorationTheme,
   );
-  
+
   static ThemeData darkTheme = ThemeData(
-    brightness: Brightness.dark,
-    useMaterial3: true,
     fontFamily: 'poppings',
-    primaryColor: Colors.blue,
-    textTheme: darkTextTheme,
+    brightness: Brightness.dark,
+    textTheme: MyTextTheme.darkTextTheme,
+    appBarTheme: MyAppBarTheme.darkAppBarTheme,
+    elevatedButtonTheme: MyElevatedButtonTheme.darkElevatedButtonTheme,
+    outlinedButtonTheme: MyOutlinedButtonTheme.darkOutlinedButtonTheme,
+    inputDecorationTheme: MyTextFormFieldTheme.darkInputDecorationTheme,
   );
 }
