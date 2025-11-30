@@ -3,7 +3,7 @@ import 'package:ecommerce/utils/theme/theme.dart';
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 
-import 'features/auth/screens/onboarding/onboarding.dart';
+import 'features/auth/screens/onboarding/screens/onboarding.dart';
 
 class App extends StatelessWidget {
   const App({super.key});

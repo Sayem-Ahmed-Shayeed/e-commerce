@@ -1,29 +1,32 @@
+import 'package:ecommerce/features/auth/screens/onboarding/widgets/next_page_button.dart';
+import 'package:ecommerce/features/auth/screens/onboarding/widgets/skip_button.dart';
+import 'package:ecommerce/features/auth/screens/onboarding/widgets/smooth_dot_indicator.dart';
 import 'package:ecommerce/utils/constants/image_strings.dart';
-import 'package:ecommerce/utils/constants/sizes.dart';
 import 'package:ecommerce/utils/constants/text_strings.dart';
-import 'package:ecommerce/utils/device/device_utility.dart';
 import 'package:flutter/material.dart';
+import 'package:get/get.dart';
 
-import 'on_boarding_content.dart';
+import '../../../../../utils/helpers/helper_functions.dart';
+import '../../../controller/onboarding_controller.dart';
+import '../widgets/on_boarding_content.dart';
 
 class Onboarding extends StatelessWidget {
   const Onboarding({super.key});
 
   @override
   Widget build(BuildContext context) {
+    //<-----Controllers------->
+    OnBoardingController onBoardingController = Get.put(OnBoardingController());
+
+    //<-------Normal Variables------>
     final theme = Theme.of(context);
+    final inDark = MyHelperFunctions.isDarkMode(context);
     return Scaffold(
       body: Stack(
         children: [
-          Positioned(
-            top: MyDeviceUtils.getAppBarHeight(),
-            right: MySizes.defaultSpace,
-            child: TextButton(
-              onPressed: () {},
-              child: Text("Skip", style: theme.textTheme.bodyMedium),
-            ),
-          ),
           PageView(
+            controller: onBoardingController.pageController,
+            onPageChanged: onBoardingController.updatePageIndicator,
             children: [
               OnBoardingPageContent(
                 onBoardingImage: MyImages.tOnBoardingImage1,
@@ -42,6 +45,9 @@ class Onboarding extends StatelessWidget {
               ),
             ],
           ),
+          SmoothDotNavigation(),
+          NextPageButton(inDark: inDark, theme: theme),
+          SkipButton(theme: theme),
         ],
       ),
     );
