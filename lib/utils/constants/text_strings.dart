@@ -103,11 +103,14 @@ class MyTexts {
       "Welcome to Your Application: Your Account is Created, Unleash the Joy of Seamless Online Experience!";
 
   // -- Forget Password Text
-  static const String tForgetPasswordTitle = "Make Selection!";
+  static const String tForgetPasswordTitle = "Forget Password";
   static const String tForgetPasswordSubTitle =
-      "Select one of the options given below to reset your password.";
+      "Don't worry sometimes people can forget too.Enter your email and we'll send you a password reset link.";
   static const String tResetViaEMail = "Reset via Mail Verification";
   static const String tResetViaPhone = "Reset via Phone Verification";
+  static const String passwordResetEmailSentTitle = "Password Reset Email Sent";
+  static const String passwordResetEmailSentSubTitle =
+      'Your account security is our priority.We\'ve sent you a secure link to safely change your password and keep you account protected';
 
   // -- Forget Password Via Phone - Text
   static const String tForgetPhoneSubTitle =

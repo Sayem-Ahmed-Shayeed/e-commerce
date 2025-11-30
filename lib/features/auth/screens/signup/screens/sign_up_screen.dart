@@ -12,6 +12,7 @@ import '../../../../../utils/helpers/helper_functions.dart';
 import '../../login/widgets/login_footer.dart';
 import '../../login/widgets/sing_in_with_google_divider.dart';
 import '../widgets/privacy_agreement_widget.dart';
+import '../widgets/return_button.dart';
 
 class SignUpScreen extends StatelessWidget {
   const SignUpScreen({super.key});
@@ -24,10 +25,12 @@ class SignUpScreen extends StatelessWidget {
     return Scaffold(
       body: SingleChildScrollView(
         child: Padding(
-          padding: defaultPadding.copyWith(top: MySizes.appBarHeight + 30),
+          padding: defaultPadding.copyWith(top: MySizes.appBarHeight),
           child: Column(
             crossAxisAlignment: CrossAxisAlignment.start,
             children: [
+              ReturnButton(inDarkMode: inDarkMode, theme: theme),
+              SizedBox(height: MySizes.spaceBtwSections),
               Text(
                 MyTexts.signupScreenTitle,
                 style: theme.textTheme.headlineMedium,

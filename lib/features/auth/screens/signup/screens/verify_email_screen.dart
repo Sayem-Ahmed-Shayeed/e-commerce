@@ -1,5 +1,6 @@
 import 'package:ecommerce/common/widgets/default_padding.dart';
 import 'package:ecommerce/features/auth/screens/signup/screens/success_page.dart';
+import 'package:ecommerce/features/auth/screens/signup/widgets/return_button.dart';
 import 'package:ecommerce/utils/constants/colors.dart';
 import 'package:ecommerce/utils/constants/image_strings.dart';
 import 'package:ecommerce/utils/constants/sizes.dart';
@@ -16,58 +17,66 @@ class VerifyEmailScreen extends StatelessWidget {
     final theme = Theme.of(context);
     final inDarkMode = MyHelperFunctions.isDarkMode(context);
     return Scaffold(
-      body: Padding(
-        padding: defaultPadding,
-        child: Center(
-          child: Column(
-            mainAxisAlignment: MainAxisAlignment.center,
-            crossAxisAlignment: CrossAxisAlignment.center,
-            children: [
-              Image(image: AssetImage(MyImages.deliveredEmailIllustration)),
-              Text(
-                MyTexts.EmailVerificationTitle,
-                style: theme.textTheme.headlineMedium,
-              ),
+      body: SingleChildScrollView(
+        child: Padding(
+          padding: defaultPadding,
+          child: Center(
+            child: Column(
+              mainAxisAlignment: MainAxisAlignment.center,
+              crossAxisAlignment: CrossAxisAlignment.center,
+              children: [
+                Row(
+                  mainAxisAlignment: MainAxisAlignment.start,
+                  children: [
+                    ReturnButton(inDarkMode: inDarkMode, theme: theme),
+                  ],
+                ),
+                Image(image: AssetImage(MyImages.deliveredEmailIllustration)),
+                Text(
+                  MyTexts.EmailVerificationTitle,
+                  style: theme.textTheme.headlineMedium,
+                ),
 
-              SizedBox(height: MySizes.spaceBtwItems),
-              Text("shayeedahmed2@gmail.com"),
-              SizedBox(height: MySizes.spaceBtwItems),
-              Text(
-                MyTexts.EmailVerificationSubTitle,
-                textAlign: TextAlign.center,
-                style: theme.textTheme.bodyMedium?.copyWith(
-                  color: inDarkMode ? MyColors.darkGrey : Colors.grey,
+                SizedBox(height: MySizes.spaceBtwItems),
+                Text("shayeedahmed2@gmail.com"),
+                SizedBox(height: MySizes.spaceBtwItems),
+                Text(
+                  MyTexts.EmailVerificationSubTitle,
+                  textAlign: TextAlign.center,
+                  style: theme.textTheme.bodyMedium?.copyWith(
+                    color: inDarkMode ? MyColors.darkGrey : Colors.grey,
+                  ),
                 ),
-              ),
 
-              SizedBox(height: MySizes.spaceBtwSections),
-              SizedBox(
-                width: Get.width,
-                child: ElevatedButton(
-                  style: ElevatedButton.styleFrom(
-                    backgroundColor: inDarkMode
-                        ? MyColors.black
-                        : MyColors.black,
-                    foregroundColor: Colors.white,
+                SizedBox(height: MySizes.spaceBtwSections),
+                SizedBox(
+                  width: Get.width,
+                  child: ElevatedButton(
+                    style: ElevatedButton.styleFrom(
+                      backgroundColor: inDarkMode
+                          ? MyColors.black
+                          : MyColors.black,
+                      foregroundColor: Colors.white,
+                    ),
+                    onPressed: () {
+                      Get.to(() => SuccessPage());
+                    },
+                    child: Text(MyTexts.tContinue),
                   ),
-                  onPressed: () {
-                    Get.to(() => SuccessPage());
-                  },
-                  child: Text(MyTexts.tContinue),
                 ),
-              ),
-              SizedBox(height: MySizes.spaceBtwItems),
-              SizedBox(
-                width: Get.width,
-                child: TextButton(
-                  style: ElevatedButton.styleFrom(
-                    foregroundColor: inDarkMode ? Colors.white : Colors.black,
+                SizedBox(height: MySizes.spaceBtwItems),
+                SizedBox(
+                  width: Get.width,
+                  child: TextButton(
+                    style: ElevatedButton.styleFrom(
+                      foregroundColor: inDarkMode ? Colors.white : Colors.black,
+                    ),
+                    onPressed: () {},
+                    child: Text(MyTexts.resendEmail),
                   ),
-                  onPressed: () {},
-                  child: Text(MyTexts.resendEmail),
                 ),
-              ),
-            ],
+              ],
+            ),
           ),
         ),
       ),
