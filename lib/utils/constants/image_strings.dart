@@ -8,6 +8,11 @@ class MyImages {
   static const String tSplashImage =
       "assets/images/splash_images/splash-screen-image.png";
 
+  // ---Login App Logo-----
+  static const String lightAppLogo =
+      'assets/logo/t-store-splash-logo-white.png';
+  static const String darkAppLogo = 'assets/logo/t-store-splash-logo-black.png';
+
   // -- OnBoarding Screen Images
   static const String tOnBoardingImage1 =
       "assets/images/on_boarding_images/on-boarding-image-1.png";

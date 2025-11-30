@@ -52,6 +52,7 @@ class MyTextTheme {
       fontWeight: FontWeight.bold,
       color: MyColors.white,
     ),
+   
     displayMedium: GoogleFonts.poppins(
       fontSize: 24.0,
       fontWeight: FontWeight.w700,

@@ -9,7 +9,7 @@ class MyTexts {
   static const String skip = "Skip";
   static const String done = "Done";
   static const String tNext = "Next";
-  static const String tLogin = "Login";
+  static const String Login = "Login";
   static const String email = "E-Mail";
   static const String submit = "Submit";
   static const String tEmail = "E-Mail";
@@ -24,9 +24,10 @@ class MyTexts {
   static const String tPassword = "Password";
   static const String tFullName = "Full Name";
   static const String tGetStarted = "Get Started";
-  static const String tForgetPassword = "Forget Password?";
+  static const String createAccount = "Create New Account";
+  static const String ForgetPassword = "Forget Password?";
   static const String homeAppbarSubTitle = "Coding With T";
-  static const String tSignInWithGoogle = "Sign-In with Google";
+  static const String SignInWithGoogle = "or Sign-In with Google";
 
   // -- Validation --
   static const String tEmailCannotEmpty = "Email cannot be empty";
@@ -66,10 +67,10 @@ class MyTexts {
       "Let's put your creativity on the development highway.";
 
   // -- Login Screen Text
-  static const String tLoginTitle = "Welcome Back,";
-  static const String tLoginSubTitle =
+  static const String LoginTitle = "Welcome Back,";
+  static const String LoginSubTitle =
       "Make it work, make it right, make it fast.";
-  static const String tRememberMe = "Remember Me?";
+  static const String RememberMe = "Remember Me?";
   static const String tDontHaveAnAccount = "Don't have an Account";
   static const String tEnterYour = "Enter your";
   static const String tResetPassword = "Reset Password";
