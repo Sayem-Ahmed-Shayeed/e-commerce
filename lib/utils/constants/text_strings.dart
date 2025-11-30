@@ -23,8 +23,14 @@ class MyTexts {
   static const String tContinue = "Continue";
   static const String tPassword = "Password";
   static const String tFullName = "Full Name";
+  static const String firstName = 'First Name';
+  static const String lastName = 'Last Name';
+  static const String username = 'Username';
+  static const String phone = 'Phone';
+  static const String agreement = "I agree to ";
+
   static const String tGetStarted = "Get Started";
-  static const String createAccount = "Create New Account";
+  static const String createAccount = "Create Account";
   static const String ForgetPassword = "Forget Password?";
   static const String homeAppbarSubTitle = "Coding With T";
   static const String SignInWithGoogle = "or Sign-In with Google";
@@ -120,7 +126,7 @@ class MyTexts {
   // -- Phone Number Authentication - Text
   static const String phoneNo = '745-628-5429';
   static const String selectCountry = 'Select Country';
-  static const String signupScreenTitle = "signupScreenTitle";
+  static const String signupScreenTitle = "Let's create your account";
   static const String signupScreenSubTitle = "signupScreenSubTitle";
   static const String otpVerification = "OTP Verification";
   static const String signInSubTitle = "We will send a one time SMS message.";
@@ -145,8 +151,8 @@ class MyTexts {
   static const String thenLets = "Then let’s ";
 
   // -- Email Verification
-  static const String tEmailVerificationTitle = "Verify your email address";
-  static const String tEmailVerificationSubTitle =
+  static const String EmailVerificationTitle = "Verify your email address";
+  static const String EmailVerificationSubTitle =
       "We have just send email verification link on your email. Please check email and click on that link to verify your Email address. \n\n If not auto redirected after verification, click on the Continue button.";
   static const String tResendEmailLink = "Resend E-Mail Link";
   static const String tBackToLogin = "Back to login";

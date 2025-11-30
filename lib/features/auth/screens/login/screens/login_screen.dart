@@ -1,9 +1,9 @@
-import 'package:ecommerce/utils/constants/image_strings.dart';
 import 'package:ecommerce/utils/constants/sizes.dart';
 import 'package:flutter/material.dart';
 
 import '../../../../../common/widgets/default_padding.dart';
 import '../../../../../utils/helpers/helper_functions.dart';
+import '../widgets/login_footer.dart';
 import '../widgets/login_form.dart';
 import '../widgets/login_header.dart';
 import '../widgets/remember_me_and_forget_pass.dart';
@@ -43,33 +43,7 @@ class LoginScreen extends StatelessWidget {
               //Divider
               SignInWithGoogleDivider(inDarkMode: inDarkMode),
               SizedBox(height: MySizes.spaceBtwSections / 1),
-              Row(
-                mainAxisAlignment: MainAxisAlignment.center,
-                children: [
-                  ElevatedButton(
-                    style: ElevatedButton.styleFrom(
-                      padding: EdgeInsets.all(MySizes.sm),
-                      shape: CircleBorder(),
-                    ),
-                    onPressed: () {},
-                    child: Image(
-                      height: MySizes.lg,
-                      image: AssetImage(MyImages.tGoogleLogo),
-                    ),
-                  ),
-                  ElevatedButton(
-                    style: ElevatedButton.styleFrom(
-                      padding: EdgeInsets.all(MySizes.sm),
-                      shape: CircleBorder(),
-                    ),
-                    onPressed: () {},
-                    child: Image(
-                      height: MySizes.lg,
-                      image: AssetImage(MyImages.tFacebookLogo),
-                    ),
-                  ),
-                ],
-              ),
+              LoginFooter(inDarkMode: inDarkMode),
             ],
           ),
         ),

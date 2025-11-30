@@ -26,8 +26,8 @@ class NextPageButton extends StatelessWidget {
             color: inDark ? Colors.white : MyColors.primary,
             width: 0.5,
           ),
-          shape: CircleBorder(eccentricity: 0.6),
-          backgroundColor: inDark ? Colors.white : MyColors.primary,
+          shape: CircleBorder(),
+          backgroundColor: inDark ? Colors.white : MyColors.secondary,
         ),
         child: Icon(
           fontWeight: FontWeight.w900,
